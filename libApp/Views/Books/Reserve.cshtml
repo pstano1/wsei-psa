@@ -1,0 +1,28 @@
+﻿@model libApp.ViewModels.ReserveBookViewModel
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h2>Lend a book</h2>
+
+@using (Html.BeginForm("Reserve", "Books"))
+{
+    <h3>
+        @Html.DisplayFor(m => m.Book.Title)
+    </h3>
+    <div class="form-group">
+        @Html.LabelFor(m => m.BC.CustomerId)
+        @if (Model != null && Model.Customers != null && Model.Customers.Any())
+        {
+            @Html.DropDownListFor(m => m.BC.CustomerId, new SelectList(Model.Customers, "Id", "FullName"), "", new { @class = "form-control" })
+        }
+        else
+        {
+            <p>No customers available.</p>
+        }
+    </div>
+
+    @Html.HiddenFor(m => m.BC.ID)
+    <button type="submit" class="btn btn-primary">Lend</button>
+}

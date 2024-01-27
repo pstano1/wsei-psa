@@ -1,0 +1,70 @@
+@model libApp.ViewModels.CustomerDetailsViewModel
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div>
+        <h4>Student</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Customer.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Customer.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Customer.Surname)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Customer.Surname)
+            </dd>
+        </dl>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Borrowed at
+                </th>
+                <th>
+                    Returned at
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bookCustomer in Model.Books.SelectMany(c => c.BookCustomers))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => bookCustomer.Book.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => bookCustomer.BorrowDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => bookCustomer.ReturnDate)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.Customer.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>
+</html>

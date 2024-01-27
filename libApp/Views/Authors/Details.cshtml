@@ -1,0 +1,65 @@
+@model libApp.ViewModels.AuthorDetailsViewModel
+
+@{
+    ViewData["Title"] = "Authors";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Author</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(m => m.Author.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(m => m.Author.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(m => m.Author.Surname)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(m => m.Author.Surname)
+            </dd>
+        </dl>
+    </div>
+    <h4>Author's books</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                   Available quantity
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Books)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AvailableQuantity)
+                    </td>
+                </tr>
+            }
+        </tbody>
+        </table>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.Author.Id">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+</body>
+</html>

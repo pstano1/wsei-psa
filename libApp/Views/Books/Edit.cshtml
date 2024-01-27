@@ -1,0 +1,47 @@
+@model libApp.ViewModels.BookFormViewModel
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h2>Create book</h2>
+
+@using (Html.BeginForm("Edit", "Books"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Book.Title)
+        @Html.TextBoxFor(m => m.Book.Title, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Book.Genre)
+        @if (Model != null)
+        {
+            @Html.DropDownListFor(m => m.Book.Genre, new SelectList(Model.Genres, "Name", "Name"), "", new { @class = "form-control" })
+        }
+        else
+        {
+            <p>No genres available.</p>
+        }
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Book.AuthorID)
+        @if (Model != null)
+        {
+            @Html.DropDownListFor(m => m.Book.AuthorID, new SelectList(Model.Authors, "Id", "FullName"), "", new { @class = "form-control" })
+        }
+        else
+        {
+            <p>No authors available.</p>
+        }
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Book.Quantity)
+        @Html.TextBoxFor(m => m.Book.Quantity, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Book.AvailableQuantity)
+        @Html.TextBoxFor(m => m.Book.AvailableQuantity, new { @class = "form-control" })
+    </div>
+
+    @Html.HiddenFor(m => m.Book.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}

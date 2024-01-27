@@ -1,0 +1,71 @@
+﻿<Properties StartupConfiguration="{DFEEEC29-3F3A-447F-8279-5DE461C6FF6F}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="libApp/Views/Customers/Details.cshtml">
+    <Files>
+      <File FileName="libApp/Models/Book.cs" Line="21" Column="1" />
+      <File FileName="libApp/Data/ApplicationDBContext.cs" Line="20" Column="6" />
+      <File FileName="libApp/Models/Author.cs" Line="10" Column="55" />
+      <File FileName="libApp/Models/Genre.cs" Line="13" Column="3" />
+      <File FileName="libApp/Models/Customer.cs" Line="1" Column="1" />
+      <File FileName="libApp/Program.cs" />
+      <File FileName="libApp/Views/Home/Index.cshtml" />
+      <File FileName="libApp/Views/Home/Privacy.cshtml" />
+      <File FileName="libApp/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="libApp/appsettings.json" />
+      <File FileName="libApp/Views/Books/Index.cshtml" Line="52" Column="72" />
+      <File FileName="libApp/Views/Books/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="libApp/Views/Books/Details.cshtml" Line="91" Column="17" />
+      <File FileName="libApp/Views/Books/Delete.cshtml" Line="30" Column="13" />
+      <File FileName="libApp/Views/Books/Create.cshtml" Line="33" Column="10" />
+      <File FileName="libApp/Views/Shared/_LoginPartial.cshtml" Line="18" Column="6" />
+      <File FileName="libApp/Views/Shared/_Layout.cshtml" Line="32" Column="64" />
+      <File FileName="libApp/Controllers/BooksController.cs" Line="211" Column="1" />
+      <File FileName="libApp/Controllers/GenresController.cs" Line="29" Column="88" />
+      <File FileName="libApp/Views/Genres/Index.cshtml" Line="11" Column="21" />
+      <File FileName="libApp/Views/Genres/Create.cshtml" Line="9" Column="7" />
+      <File FileName="libApp/ViewModels/BookFormViewModel.cs" Line="14" Column="1" />
+      <File FileName="libApp/Views/Genres/Delete.cshtml" Line="5" Column="2" />
+      <File FileName="libApp/Controllers/AuthorsController.cs" Line="42" Column="55" />
+      <File FileName="libApp/Views/Authors/Create.cshtml" Line="4" Column="35" />
+      <File FileName="libApp/Views/Authors/Delete.cshtml" Line="4" Column="35" />
+      <File FileName="libApp/Views/Authors/Details.cshtml" Line="16" Column="24" />
+      <File FileName="libApp/Views/Authors/Edit.cshtml" Line="20" Column="31" />
+      <File FileName="libApp/Views/Authors/Index.cshtml" Line="46" Column="9" />
+      <File FileName="libApp/ViewModels/AuthorDetailsViewModel.cs" Line="8" Column="43" />
+      <File FileName="libApp/Views/Customers/Create.cshtml" Line="16" Column="12" />
+      <File FileName="libApp/Views/Customers/Delete.cshtml" Line="7" Column="16" />
+      <File FileName="libApp/Views/Customers/Details.cshtml" Line="60" Column="26" />
+      <File FileName="libApp/Views/Customers/Edit.cshtml" Line="16" Column="12" />
+      <File FileName="libApp/Views/Customers/Index.cshtml" Line="4" Column="5" />
+      <File FileName="libApp/Views/Books/Reserve.cshtml" Line="25" Column="1" />
+      <File FileName="libApp/ViewModels/ReserveBookViewModel.cs" Line="13" Column="1" />
+      <File FileName="libApp/Controllers/CustomersController.cs" Line="39" Column="34" />
+      <File FileName="libApp/ViewModels/BookDetailsViewModel.cs" Line="13" Column="1" />
+      <File FileName="libApp/ViewModels/CustomerDetailsViewModel.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="libApp" expanded="True">
+            <Node name="libApp" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Books" expanded="True" />
+                <Node name="Customers" expanded="True">
+                  <Node name="Details.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.libApp PreferredExecutionTarget="/Applications/Arc.app" />
+</Properties>
